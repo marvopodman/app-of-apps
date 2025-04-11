@@ -3,9 +3,15 @@ test_pod:
   image: bats/bats:1.8.2
   pullPolicy: IfNotPresent
 
-loki:
-  enabled: true
-  isDefault: true
+#loki:
+#  enabled: true
+#  isDefault: true
+ loki:
+    enabled: true
+    isDefault: true
+  persistence:
+    enabled: true
+    storageClassName: "openebs-hostpath" 
 
 
 promtail:
